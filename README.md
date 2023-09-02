@@ -4,4 +4,4 @@
 
 # The database can be completely reconstructed. The final database and the codes used to replicate the results are also in the file.
 
-# For reasons of confidentiality, only the source data on the concentration of pollutants produced by ineris is not available in this file. However, the pollution indicators used in the study are available 
+# For reasons of confidentiality, the source data on the concentration of pollutants produced by ineris is not available in this file. However, the pollution indicators used in the study are available 
