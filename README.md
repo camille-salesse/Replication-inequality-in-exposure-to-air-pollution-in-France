@@ -4,3 +4,5 @@
 
 # The database can be completely reconstructed. The final database and the codes used to replicate the results are also in the file.
 
+# le shapefile est trop volumineux pour etre telechargé ici . il est neamoins possible de le telecharger directement ici : https://www.data.gouv.fr/fr/datasets/decoupage-administratif-communal-francais-issu-d-openstreetmap/
+
