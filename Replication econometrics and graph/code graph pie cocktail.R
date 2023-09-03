@@ -26,13 +26,23 @@ library(FactoMineR)
 library(factoextra)
 
 
-setwd("D:/code and data inequality in exposure to air pollution")
+
+setwd("Replication-inequality-in-exposure-to-air-pollution-in-France/Replication econometrics and graph")
 
 
 # Load the original csv
 # This was created after running preparation.R
 
-data <- read.csv("final_data_inequality_in_exposure")
+data1 <- read.csv("final_data_inequality_in_exposure_1")
+data2 <- read.csv("final_data_inequality_in_exposure_2")
+data3 <- read.csv("final_data_inequality_in_exposure_3")
+
+data1<-data1[,-c(1)]
+data2<-data2[,-c(1)]
+data3<-data3[,-c(1)]
+
+data<-left_join(data1,data2)
+data<-left_join(data,data3)
 
 
 
@@ -68,7 +78,7 @@ data$part_no2_pm25_2<-data$no2_pm25_2/data$sum_cocktail_day
 
 
 
-#data2<-filter(data, data$Typologie_urbain_rural=="rural autonome peu dense"| data$Typologie_urbain_rural=="rural autonome très peu dense"|data$Typologie_urbain_rural=="rural sous faible influence d'un pôle"|data$Typologie_urbain_rural=="rural sous forte influence d'un pôle")
+#data2<-filter(data, data$Typologie_urbain_rural=="rural autonome peu dense"| data$Typologie_urbain_rural=="rural autonome trÃ¨s peu dense"|data$Typologie_urbain_rural=="rural sous faible influence d'un pÃ´le"|data$Typologie_urbain_rural=="rural sous forte influence d'un pÃ´le")
 
 
 data$somme_cocktail<-data$part_no2_pm25_pm10_o3+data$part_no2_pm10_2+data$part_pm10_o3_2+data$part_no2_pm10_o3_2+data$part_no2_o3_2+data$part_pm25_o3_2+data$part_o3_2+data$part_no2_2+data$part_pm10_2+data$part_pm25_2+data$part_pm25_no2_o3_2+data$part_pm10_pm25_o3_2+data$part_pm25_pm10_2+data$part_no2_pm25_pm10_2+data$part_no2_pm25_2
@@ -179,7 +189,7 @@ data$part_no2_pm25_2<-data$no2_pm25_2/data$sum_cocktail_day
 
 
 
-data2<-filter(data, data$Typologie_urbain_rural=="urbain densité intermédiaire")
+data2<-filter(data, data$Typologie_urbain_rural=="urbain densitÃ© intermÃ©diaire")
 
 
 data$somme_cocktail<-data$part_no2_pm25_pm10_o3+data$part_no2_pm10_2+data$part_pm10_o3_2+data$part_no2_pm10_o3_2+data$part_no2_o3_2+data$part_pm25_o3_2+data$part_o3_2+data$part_no2_2+data$part_pm10_2+data$part_pm25_2+data$part_pm25_no2_o3_2+data$part_pm10_pm25_o3_2+data$part_pm25_pm10_2+data$part_no2_pm25_pm10_2+data$part_no2_pm25_2
@@ -233,7 +243,7 @@ data$part_no2_pm25_2<-data$no2_pm25_2/data$sum_cocktail_day
 
 
 
-data2<-filter(data, data$Typologie_urbain_rural=="rural autonome peu dense"| data$Typologie_urbain_rural=="rural autonome très peu dense"|data$Typologie_urbain_rural=="rural sous faible influence d'un pôle"|data$Typologie_urbain_rural=="rural sous forte influence d'un pôle")
+data2<-filter(data, data$Typologie_urbain_rural=="rural autonome peu dense"| data$Typologie_urbain_rural=="rural autonome trÃ¨s peu dense"|data$Typologie_urbain_rural=="rural sous faible influence d'un pÃ´le"|data$Typologie_urbain_rural=="rural sous forte influence d'un pÃ´le")
 
 
 
