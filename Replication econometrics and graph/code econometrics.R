@@ -30,7 +30,7 @@ library(FactoMineR)
 library(factoextra)
 
 
-setwd("D:/code and data inequality in exposure to air pollution")
+setwd("Replication-inequality-in-exposure-to-air-pollution-in-France/Replication econometrics and graph")
 
 
 # Load the original csv
@@ -58,7 +58,7 @@ data_urbain<-filter(data, data$Typologie_urbain_rural=="urbain dense")
 
 
 
-fm <- sum_cocktail_day~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- sum_cocktail_day~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols1 <- lm(fm, data = data_urbain)
 
@@ -66,25 +66,25 @@ ols1 <- lm(fm, data = data_urbain)
 
 
 
-fm <- nombre_jours_au_dessus_seuils_no2~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_no2~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols2 <- lm(fm, data = data_urbain)
 
 
 
 
-fm <- nombre_jours_au_dessus_seuils_pm25~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_pm25~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols3 <- lm(fm, data = data_urbain)
 
 
 
-fm <- nombre_jours_au_dessus_seuils_pm10~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_pm10~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols4 <- lm(fm, data = data_urbain)
 
 
-fm <- nombre_jours_au_dessus_seuils_O3~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_O3~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols5 <- lm(fm, data = data_urbain)
 
@@ -101,42 +101,42 @@ library(sandwich)
 ols1_clus <- coeftest(ols1,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 
 ols2_clus <- coeftest(ols2,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 ols3_clus <- coeftest(ols3,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 
 ols4_clus <- coeftest(ols4,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 ols5_clus <- coeftest(ols5,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 
 library(stargazer)
 
-stargazer(ols1_clus, ols2_clus, ols3_clus, ols4_clus,ols5_clus, no.space = TRUE, omit = c("Département"), omit.labels= c("Département"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
+stargazer(ols1_clus, ols2_clus, ols3_clus, ols4_clus,ols5_clus, no.space = TRUE, omit = c("DÃ©partement"), omit.labels= c("DÃ©partement"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
 
 
-stargazer(ols1, ols2, ols3, ols4,ols5, no.space = TRUE, omit = c("Département"), omit.labels= c("Département"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
+stargazer(ols1, ols2, ols3, ols4,ols5, no.space = TRUE, omit = c("DÃ©partement"), omit.labels= c("DÃ©partement"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
 
 
 
@@ -147,13 +147,13 @@ stargazer(ols1, ols2, ols3, ols4,ols5, no.space = TRUE, omit = c("Département"),
 
 
 
-data_urbain<-filter(data, data$Typologie_urbain_rural=="urbain densité intermédiaire")
+data_urbain<-filter(data, data$Typologie_urbain_rural=="urbain densitÃ© intermÃ©diaire")
 
 
 
 
 
-fm <- sum_cocktail_day~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- sum_cocktail_day~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols1 <- lm(fm, data = data_urbain)
 
@@ -161,25 +161,25 @@ ols1 <- lm(fm, data = data_urbain)
 
 
 
-fm <- nombre_jours_au_dessus_seuils_no2~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_no2~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols2 <- lm(fm, data = data_urbain)
 
 
 
 
-fm <- nombre_jours_au_dessus_seuils_pm25~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_pm25~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols3 <- lm(fm, data = data_urbain)
 
 
 
-fm <- nombre_jours_au_dessus_seuils_pm10~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_pm10~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols4 <- lm(fm, data = data_urbain)
 
 
-fm <- nombre_jours_au_dessus_seuils_O3~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_O3~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols5 <- lm(fm, data = data_urbain)
 
@@ -196,40 +196,40 @@ library(sandwich)
 ols1_clus <- coeftest(ols1,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 
 ols2_clus <- coeftest(ols2,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 ols3_clus <- coeftest(ols3,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 
 ols4_clus <- coeftest(ols4,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 ols5_clus <- coeftest(ols5,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 
-stargazer(ols1_clus, ols2_clus, ols3_clus, ols4_clus,ols5_clus, no.space = TRUE, omit = c("Département"), omit.labels= c("Département"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
+stargazer(ols1_clus, ols2_clus, ols3_clus, ols4_clus,ols5_clus, no.space = TRUE, omit = c("DÃ©partement"), omit.labels= c("DÃ©partement"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
 
 
-stargazer(ols1, ols2, ols3, ols4,ols5, no.space = TRUE, omit = c("Département"), omit.labels= c("Département"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
+stargazer(ols1, ols2, ols3, ols4,ols5, no.space = TRUE, omit = c("DÃ©partement"), omit.labels= c("DÃ©partement"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
 
 
 
@@ -242,13 +242,13 @@ stargazer(ols1, ols2, ols3, ols4,ols5, no.space = TRUE, omit = c("Département"),
 
 
 
-data_urbain<-filter(data, data$Typologie_urbain_rural=="rural sous forte influence d'un pôle")
+data_urbain<-filter(data, data$Typologie_urbain_rural=="rural sous forte influence d'un pÃ´le")
 
 
 
 
 
-fm <- sum_cocktail_day~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- sum_cocktail_day~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols1 <- lm(fm, data = data_urbain)
 
@@ -256,25 +256,25 @@ ols1 <- lm(fm, data = data_urbain)
 
 
 
-fm <- nombre_jours_au_dessus_seuils_no2~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_no2~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols2 <- lm(fm, data = data_urbain)
 
 
 
 
-fm <- nombre_jours_au_dessus_seuils_pm25~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_pm25~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols3 <- lm(fm, data = data_urbain)
 
 
 
-fm <- nombre_jours_au_dessus_seuils_pm10~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_pm10~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols4 <- lm(fm, data = data_urbain)
 
 
-fm <- nombre_jours_au_dessus_seuils_O3~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_O3~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols5 <- lm(fm, data = data_urbain)
 
@@ -291,40 +291,40 @@ library(sandwich)
 ols1_clus <- coeftest(ols1,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 
 ols2_clus <- coeftest(ols2,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 ols3_clus <- coeftest(ols3,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 
 ols4_clus <- coeftest(ols4,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 ols5_clus <- coeftest(ols5,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 
-stargazer(ols1_clus, ols2_clus, ols3_clus, ols4_clus,ols5_clus, no.space = TRUE, omit = c("Département"), omit.labels= c("Département"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
+stargazer(ols1_clus, ols2_clus, ols3_clus, ols4_clus,ols5_clus, no.space = TRUE, omit = c("DÃ©partement"), omit.labels= c("DÃ©partement"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
 
 
-stargazer(ols1, ols2, ols3, ols4,ols5, no.space = TRUE, omit = c("Département"), omit.labels= c("Département"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
+stargazer(ols1, ols2, ols3, ols4,ols5, no.space = TRUE, omit = c("DÃ©partement"), omit.labels= c("DÃ©partement"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
 
 
 
@@ -333,13 +333,13 @@ stargazer(ols1, ols2, ols3, ols4,ols5, no.space = TRUE, omit = c("Département"),
 
 
 
-data_urbain<-filter(data, data$Typologie_urbain_rural=="rural sous faible influence d'un pôle")
+data_urbain<-filter(data, data$Typologie_urbain_rural=="rural sous faible influence d'un pÃ´le")
 
 
 
 
 
-fm <- sum_cocktail_day~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- sum_cocktail_day~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols1 <- lm(fm, data = data_urbain)
 
@@ -347,25 +347,25 @@ ols1 <- lm(fm, data = data_urbain)
 
 
 
-fm <- nombre_jours_au_dessus_seuils_no2~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_no2~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols2 <- lm(fm, data = data_urbain)
 
 
 
 
-fm <- nombre_jours_au_dessus_seuils_pm25~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_pm25~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols3 <- lm(fm, data = data_urbain)
 
 
 
-fm <- nombre_jours_au_dessus_seuils_pm10~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_pm10~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols4 <- lm(fm, data = data_urbain)
 
 
-fm <- nombre_jours_au_dessus_seuils_O3~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_O3~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols5 <- lm(fm, data = data_urbain)
 
@@ -382,53 +382,53 @@ library(sandwich)
 ols1_clus <- coeftest(ols1,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 
 ols2_clus <- coeftest(ols2,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 ols3_clus <- coeftest(ols3,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 
 ols4_clus <- coeftest(ols4,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 ols5_clus <- coeftest(ols5,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 
-stargazer(ols1_clus, ols2_clus, ols3_clus, ols4_clus,ols5_clus, no.space = TRUE, omit = c("Département"), omit.labels= c("Département"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
+stargazer(ols1_clus, ols2_clus, ols3_clus, ols4_clus,ols5_clus, no.space = TRUE, omit = c("DÃ©partement"), omit.labels= c("DÃ©partement"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
 
 
-stargazer(ols1, ols2, ols3, ols4,ols5, no.space = TRUE, omit = c("Département"), omit.labels= c("Département"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
+stargazer(ols1, ols2, ols3, ols4,ols5, no.space = TRUE, omit = c("DÃ©partement"), omit.labels= c("DÃ©partement"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
 
 
 ###### rural ##########
 
 
 
-data_urbain<-filter(data, data$Typologie_urbain_rural=="rural autonome très peu dense")
+data_urbain<-filter(data, data$Typologie_urbain_rural=="rural autonome trÃ¨s peu dense")
 
 
 
 
 
-fm <- sum_cocktail_day~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- sum_cocktail_day~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols1 <- lm(fm, data = data_urbain)
 
@@ -436,25 +436,25 @@ ols1 <- lm(fm, data = data_urbain)
 
 
 
-fm <- nombre_jours_au_dessus_seuils_no2~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_no2~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols2 <- lm(fm, data = data_urbain)
 
 
 
 
-fm <- nombre_jours_au_dessus_seuils_pm25~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_pm25~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols3 <- lm(fm, data = data_urbain)
 
 
 
-fm <- nombre_jours_au_dessus_seuils_pm10~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_pm10~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols4 <- lm(fm, data = data_urbain)
 
 
-fm <- nombre_jours_au_dessus_seuils_O3~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_O3~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols5 <- lm(fm, data = data_urbain)
 
@@ -471,40 +471,40 @@ library(sandwich)
 ols1_clus <- coeftest(ols1,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 
 ols2_clus <- coeftest(ols2,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 ols3_clus <- coeftest(ols3,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 
 ols4_clus <- coeftest(ols4,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 ols5_clus <- coeftest(ols5,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 
-stargazer(ols1_clus, ols2_clus, ols3_clus, ols4_clus,ols5_clus, no.space = TRUE, omit = c("Département"), omit.labels= c("Département"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
+stargazer(ols1_clus, ols2_clus, ols3_clus, ols4_clus,ols5_clus, no.space = TRUE, omit = c("DÃ©partement"), omit.labels= c("DÃ©partement"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
 
 
-stargazer(ols1, ols2, ols3, ols4,ols5, no.space = TRUE, omit = c("Département"), omit.labels= c("Département"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
+stargazer(ols1, ols2, ols3, ols4,ols5, no.space = TRUE, omit = c("DÃ©partement"), omit.labels= c("DÃ©partement"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
 
 ########### rural peu dense ########
 
@@ -518,7 +518,7 @@ data_urbain<-filter(data, data$Typologie_urbain_rural=="rural autonome peu dense
 
 
 
-fm <- sum_cocktail_day~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- sum_cocktail_day~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols1 <- lm(fm, data = data_urbain)
 
@@ -526,25 +526,25 @@ ols1 <- lm(fm, data = data_urbain)
 
 
 
-fm <- nombre_jours_au_dessus_seuils_no2~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_no2~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols2 <- lm(fm, data = data_urbain)
 
 
 
 
-fm <- nombre_jours_au_dessus_seuils_pm25~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_pm25~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols3 <- lm(fm, data = data_urbain)
 
 
 
-fm <- nombre_jours_au_dessus_seuils_pm10~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_pm10~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols4 <- lm(fm, data = data_urbain)
 
 
-fm <- nombre_jours_au_dessus_seuils_O3~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_O3~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols5 <- lm(fm, data = data_urbain)
 
@@ -561,40 +561,40 @@ library(sandwich)
 ols1_clus <- coeftest(ols1,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 
 ols2_clus <- coeftest(ols2,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 ols3_clus <- coeftest(ols3,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 
 ols4_clus <- coeftest(ols4,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 ols5_clus <- coeftest(ols5,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 
-stargazer(ols1_clus, ols2_clus, ols3_clus, ols4_clus,ols5_clus, no.space = TRUE, omit = c("Département"), omit.labels= c("Département"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
+stargazer(ols1_clus, ols2_clus, ols3_clus, ols4_clus,ols5_clus, no.space = TRUE, omit = c("DÃ©partement"), omit.labels= c("DÃ©partement"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
 
 
-stargazer(ols1, ols2, ols3, ols4,ols5, no.space = TRUE, omit = c("Département"), omit.labels= c("Département"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
+stargazer(ols1, ols2, ols3, ols4,ols5, no.space = TRUE, omit = c("DÃ©partement"), omit.labels= c("DÃ©partement"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
 
 
 
@@ -663,14 +663,14 @@ data_urbain<-filter(data, data$Typologie_urbain_rural=="urbain dense")
 
 
 
-fm <- part_pm25_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- part_pm25_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols1 <- lm(fm, data = data_urbain)
 
 
 
 
-fm <- part_no2_pm25_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- part_no2_pm25_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols2 <- lm(fm, data = data_urbain)
 
@@ -679,32 +679,32 @@ ols2 <- lm(fm, data = data_urbain)
 
 
 
-fm <- part_pm25_pm10_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- part_pm25_pm10_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols3 <- lm(fm, data = data_urbain)
 
 
 
 
-fm <- part_pm25_o3_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- part_pm25_o3_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols4 <- lm(fm, data = data_urbain)
 
 
 
-fm <- part_no2_pm25_pm10_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- part_no2_pm25_pm10_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols5 <- lm(fm, data = data_urbain)
 
 
 
 
-fm <- part_no2_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- part_no2_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols6 <- lm(fm, data = data_urbain)
 
 
-fm <- part_o3_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- part_o3_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols7 <- lm(fm, data = data_urbain)
 
@@ -719,51 +719,51 @@ library(sandwich)
 ols1_clus <- coeftest(ols1,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 
 ols2_clus <- coeftest(ols2,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 ols3_clus <- coeftest(ols3,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 
 ols4_clus <- coeftest(ols4,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 
 ols5_clus <- coeftest(ols5,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 ols6_clus <- coeftest(ols6,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 ols7_clus <- coeftest(ols7,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 library(stargazer)
-stargazer(ols1_clus, ols2_clus, ols3_clus, ols4_clus,ols5_clus,ols6_clus,ols7_clus, no.space = TRUE, omit = c("Département"), omit.labels= c("Département"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
+stargazer(ols1_clus, ols2_clus, ols3_clus, ols4_clus,ols5_clus,ols6_clus,ols7_clus, no.space = TRUE, omit = c("DÃ©partement"), omit.labels= c("DÃ©partement"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
 
 
-stargazer(ols1, ols2,ols3,ols4,ols5,ols6,ols7, no.space = TRUE, omit = c("Département"), omit.labels= c("Département"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
+stargazer(ols1, ols2,ols3,ols4,ols5,ols6,ols7, no.space = TRUE, omit = c("DÃ©partement"), omit.labels= c("DÃ©partement"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
 
 
 
@@ -799,19 +799,19 @@ data$part_no2_pm25_2<-data$no2_pm25_2/data$sum_cocktail_day
 
 
 
-data_urbain<-filter(data, data$Typologie_urbain_rural=="urbain densité intermédiaire")
+data_urbain<-filter(data, data$Typologie_urbain_rural=="urbain densitÃ© intermÃ©diaire")
 #data_urbain <- within(data_urbain, decile <- as.integer(cut(sum_cocktail_day, quantile(sum_cocktail_day, prob = seq(0, 1, length = 6), na.rm = TRUE), include.lowest=TRUE)))
 
 
 
-fm <- part_pm25_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- part_pm25_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols1 <- lm(fm, data = data_urbain)
 
 
 
 
-fm <- part_no2_pm25_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- part_no2_pm25_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols2 <- lm(fm, data = data_urbain)
 
@@ -820,32 +820,32 @@ ols2 <- lm(fm, data = data_urbain)
 
 
 
-fm <- part_pm25_pm10_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- part_pm25_pm10_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols3 <- lm(fm, data = data_urbain)
 
 
 
 
-fm <- part_pm25_o3_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- part_pm25_o3_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols4 <- lm(fm, data = data_urbain)
 
 
 
-fm <- part_no2_pm25_pm10_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- part_no2_pm25_pm10_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols5 <- lm(fm, data = data_urbain)
 
 
 
 
-fm <- part_no2_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- part_no2_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols6 <- lm(fm, data = data_urbain)
 
 
-fm <- part_o3_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- part_o3_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols7 <- lm(fm, data = data_urbain)
 
@@ -860,51 +860,51 @@ library(sandwich)
 ols1_clus <- coeftest(ols1,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 
 ols2_clus <- coeftest(ols2,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 ols3_clus <- coeftest(ols3,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 
 ols4_clus <- coeftest(ols4,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 
 ols5_clus <- coeftest(ols5,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 ols6_clus <- coeftest(ols6,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 ols7_clus <- coeftest(ols7,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 library(stargazer)
-stargazer(ols1_clus, ols2_clus, ols3_clus, ols4_clus,ols5_clus,ols6_clus,ols7_clus, no.space = TRUE, omit = c("Département"), omit.labels= c("Département"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
+stargazer(ols1_clus, ols2_clus, ols3_clus, ols4_clus,ols5_clus,ols6_clus,ols7_clus, no.space = TRUE, omit = c("DÃ©partement"), omit.labels= c("DÃ©partement"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
 
 
-stargazer(ols1, ols2,ols3,ols4,ols5,ols6,ols7, no.space = TRUE, omit = c("Département"), omit.labels= c("Département"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
+stargazer(ols1, ols2,ols3,ols4,ols5,ols6,ols7, no.space = TRUE, omit = c("DÃ©partement"), omit.labels= c("DÃ©partement"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
 
 
 
@@ -946,19 +946,19 @@ data$part_no2_pm25_2<-data$no2_pm25_2/data$sum_cocktail_day
 
 
 
-data_urbain<-filter(data, data$Typologie_urbain_rural=="rural sous forte influence d'un pôle"|data$Typologie_urbain_rural=="rural sous faible influence d'un pôle"|data$Typologie_urbain_rural=="rural autonome très peu dense"|data$Typologie_urbain_rural=="rural autonome peu dense")
+data_urbain<-filter(data, data$Typologie_urbain_rural=="rural sous forte influence d'un pÃ´le"|data$Typologie_urbain_rural=="rural sous faible influence d'un pÃ´le"|data$Typologie_urbain_rural=="rural autonome trÃ¨s peu dense"|data$Typologie_urbain_rural=="rural autonome peu dense")
 #data_urbain <- within(data_urbain, decile <- as.integer(cut(sum_cocktail_day, quantile(sum_cocktail_day, prob = seq(0, 1, length = 6), na.rm = TRUE), include.lowest=TRUE)))
 
 
 
-fm <- part_pm25_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- part_pm25_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols1 <- lm(fm, data = data_urbain)
 
 
 
 
-fm <- part_no2_pm25_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- part_no2_pm25_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols2 <- lm(fm, data = data_urbain)
 
@@ -967,32 +967,32 @@ ols2 <- lm(fm, data = data_urbain)
 
 
 
-fm <- part_pm25_pm10_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- part_pm25_pm10_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols3 <- lm(fm, data = data_urbain)
 
 
 
 
-fm <- part_pm25_o3_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- part_pm25_o3_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols4 <- lm(fm, data = data_urbain)
 
 
 
-fm <- part_no2_pm25_pm10_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- part_no2_pm25_pm10_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols5 <- lm(fm, data = data_urbain)
 
 
 
 
-fm <- part_no2_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- part_no2_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols6 <- lm(fm, data = data_urbain)
 
 
-fm <- part_o3_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- part_o3_2~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols7 <- lm(fm, data = data_urbain)
 
@@ -1007,51 +1007,51 @@ library(sandwich)
 ols1_clus <- coeftest(ols1,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 
 ols2_clus <- coeftest(ols2,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 ols3_clus <- coeftest(ols3,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 
 ols4_clus <- coeftest(ols4,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 
 ols5_clus <- coeftest(ols5,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 ols6_clus <- coeftest(ols6,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 ols7_clus <- coeftest(ols7,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 library(stargazer)
-stargazer(ols1_clus, ols2_clus, ols3_clus, ols4_clus,ols5_clus,ols6_clus,ols7_clus, no.space = TRUE, omit = c("Département"), omit.labels= c("Département"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
+stargazer(ols1_clus, ols2_clus, ols3_clus, ols4_clus,ols5_clus,ols6_clus,ols7_clus, no.space = TRUE, omit = c("DÃ©partement"), omit.labels= c("DÃ©partement"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
 
 
-stargazer(ols1, ols2,ols3,ols4,ols5,ols6,ols7, no.space = TRUE, omit = c("Département"), omit.labels= c("Département"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
+stargazer(ols1, ols2,ols3,ols4,ols5,ols6,ols7, no.space = TRUE, omit = c("DÃ©partement"), omit.labels= c("DÃ©partement"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
 
 
 
@@ -1096,7 +1096,7 @@ data_urbain <- within(data_urbain, decile <- as.integer(cut(sum_cocktail_day, qu
 
 
 
-fm <- part_cocktail~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- part_cocktail~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols1 <- lm(fm, data = data_urbain)
 
@@ -1111,15 +1111,15 @@ library(sandwich)
 ols1_clus <- coeftest(ols1,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 
 library(stargazer)
-stargazer(ols1_clus, no.space = TRUE, omit = c("Département"), omit.labels= c("Département"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
+stargazer(ols1_clus, no.space = TRUE, omit = c("DÃ©partement"), omit.labels= c("DÃ©partement"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
 
 
-stargazer(ols1, no.space = TRUE, omit = c("Département"), omit.labels= c("Département"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
+stargazer(ols1, no.space = TRUE, omit = c("DÃ©partement"), omit.labels= c("DÃ©partement"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
 
 
 
@@ -1140,13 +1140,13 @@ data$part_cocktail<-(data$no2_pm25_pm10_o3+data$no2_pm10_2+data$pm10_o3_2+data$n
 
 
 
-data_urbain<-filter(data, data$Typologie_urbain_rural=="urbain densité intermédiaire")
+data_urbain<-filter(data, data$Typologie_urbain_rural=="urbain densitÃ© intermÃ©diaire")
 
 data_urbain <- within(data_urbain, decile <- as.integer(cut(sum_cocktail_day, quantile(sum_cocktail_day, prob = seq(0, 1, length = 6), na.rm = TRUE), include.lowest=TRUE)))
 
 
 
-fm <- part_cocktail~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- part_cocktail~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols2 <- lm(fm, data = data_urbain)
 
@@ -1161,15 +1161,15 @@ library(sandwich)
 ols2_clus <- coeftest(ols2,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 
 library(stargazer)
-stargazer(ols1_clus, no.space = TRUE, omit = c("Département"), omit.labels= c("Département"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
+stargazer(ols1_clus, no.space = TRUE, omit = c("DÃ©partement"), omit.labels= c("DÃ©partement"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
 
 
-stargazer(ols1, no.space = TRUE, omit = c("Département"), omit.labels= c("Département"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
+stargazer(ols1, no.space = TRUE, omit = c("DÃ©partement"), omit.labels= c("DÃ©partement"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
 
 
 
@@ -1192,13 +1192,13 @@ data$part_cocktail<-(data$no2_pm25_pm10_o3+data$no2_pm10_2+data$pm10_o3_2+data$n
 
 
 
-data_urbain<-filter(data, data$Typologie_urbain_rural=="rural sous forte influence d'un pôle"|data$Typologie_urbain_rural=="rural sous faible influence d'un pôle"|data$Typologie_urbain_rural=="rural autonome très peu dense"|data$Typologie_urbain_rural=="rural autonome peu dense")
+data_urbain<-filter(data, data$Typologie_urbain_rural=="rural sous forte influence d'un pÃ´le"|data$Typologie_urbain_rural=="rural sous faible influence d'un pÃ´le"|data$Typologie_urbain_rural=="rural autonome trÃ¨s peu dense"|data$Typologie_urbain_rural=="rural autonome peu dense")
 
 data_urbain <- within(data_urbain, decile <- as.integer(cut(sum_cocktail_day, quantile(sum_cocktail_day, prob = seq(0, 1, length = 6), na.rm = TRUE), include.lowest=TRUE)))
 
 
 
-fm <- part_cocktail~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- part_cocktail~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols3 <- lm(fm, data = data_urbain)
 
@@ -1213,15 +1213,15 @@ library(sandwich)
 ols3_clus <- coeftest(ols3,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 
 library(stargazer)
-stargazer(ols1_clus,ols2_clus,ols3_clus, no.space = TRUE, omit = c("Département"), omit.labels= c("Département"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
+stargazer(ols1_clus,ols2_clus,ols3_clus, no.space = TRUE, omit = c("DÃ©partement"), omit.labels= c("DÃ©partement"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
 
 
-stargazer(ols1, ols2, ols3, no.space = TRUE, omit = c("Département"), omit.labels= c("Département"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
+stargazer(ols1, ols2, ols3, no.space = TRUE, omit = c("DÃ©partement"), omit.labels= c("DÃ©partement"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
 
 
 
@@ -1256,71 +1256,71 @@ data_urbain<-filter(data, data$Typologie_urbain_rural=="urbain dense")
 
 #or
 
-data_urbain<-filter(data, data$Typologie_urbain_rural=="urbain densité intermédiaire")
+data_urbain<-filter(data, data$Typologie_urbain_rural=="urbain densitÃ© intermÃ©diaire")
 
 
-fm <- sum_cocktail_day~taux_pauvrete_seuil_60+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- sum_cocktail_day~taux_pauvrete_seuil_60+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols1 <- lm(fm, data = data_urbain)
 
 
 
 
-fm <- sum_cocktail_day~premier_decile+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- sum_cocktail_day~premier_decile+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols2 <- lm(fm, data = data_urbain)
 
 
 
-fm <- sum_cocktail_day~neuvieme_decile+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- sum_cocktail_day~neuvieme_decile+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols3 <- lm(fm, data = data_urbain)
 
 
 
 
-fm <- sum_cocktail_day~part_prestation_sociale+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- sum_cocktail_day~part_prestation_sociale+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols4 <- lm(fm, data = data_urbain)
 
 
 
 
-fm <- sum_cocktail_day~part_revenu_patrimoine_et_autre_revenu+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- sum_cocktail_day~part_revenu_patrimoine_et_autre_revenu+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols5 <- lm(fm, data = data_urbain)
 
 
 
 
-fm <- part_cocktail~taux_pauvrete_seuil_60+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- part_cocktail~taux_pauvrete_seuil_60+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols1 <- lm(fm, data = data_urbain)
 
 
 
 
-fm <- part_cocktail~premier_decile+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- part_cocktail~premier_decile+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols2 <- lm(fm, data = data_urbain)
 
 
 
-fm <- part_cocktail~neuvieme_decile+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- part_cocktail~neuvieme_decile+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols3 <- lm(fm, data = data_urbain)
 
 
 
 
-fm <- part_cocktail~part_prestation_sociale+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- part_cocktail~part_prestation_sociale+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols4 <- lm(fm, data = data_urbain)
 
 
 
 
-fm <- part_cocktail~part_revenu_patrimoine_et_autre_revenu+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(Département)
+fm <- part_cocktail~part_revenu_patrimoine_et_autre_revenu+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(annee)+factor(DÃ©partement)
 
 ols5 <- lm(fm, data = data_urbain)
 
@@ -1336,31 +1336,31 @@ library(sandwich)
 ols1_clus <- coeftest(ols1,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 ols2_clus <- coeftest(ols2,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 ols3_clus <- coeftest(ols3,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 ols4_clus <- coeftest(ols4,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 ols5_clus <- coeftest(ols5,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data_urbain$Département)
+                      cluster = data_urbain$DÃ©partement)
 
 
 
@@ -1368,10 +1368,10 @@ ols5_clus <- coeftest(ols5,
 library(stargazer)
 
 
-stargazer(ols1_clus,ols2_clus,ols3_clus,ols4_clus,ols5_clus, no.space = TRUE, omit = c("Département"), omit.labels= c("Département"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
+stargazer(ols1_clus,ols2_clus,ols3_clus,ols4_clus,ols5_clus, no.space = TRUE, omit = c("DÃ©partement"), omit.labels= c("DÃ©partement"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
 
 
-stargazer(ols1,ols2,ols3,ols4,ols5, no.space = TRUE, omit = c("Département"), omit.labels= c("Département"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
+stargazer(ols1,ols2,ols3,ols4,ols5, no.space = TRUE, omit = c("DÃ©partement"), omit.labels= c("DÃ©partement"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
 
 
 
@@ -1386,7 +1386,7 @@ stargazer(ols1,ols2,ols3,ols4,ols5, no.space = TRUE, omit = c("Département"), om
 
 
 
-fm <- nombre_jours_au_dessus_seuils_no2~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)+factor(Typologie_urbain_rural)
+fm <- nombre_jours_au_dessus_seuils_no2~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)+factor(Typologie_urbain_rural)
 
 
 
@@ -1398,7 +1398,7 @@ VIF(ols1)
 
 
 
-fm <- nombre_jours_au_dessus_seuils_pm25~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)+factor(Typologie_urbain_rural)
+fm <- nombre_jours_au_dessus_seuils_pm25~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)+factor(Typologie_urbain_rural)
 
 
 ols3 <- lm(fm, data = data,weights=population_scale)
@@ -1411,7 +1411,7 @@ VIF(ols3)
 
 
 
-fm <- nombre_jours_au_dessus_seuils_pm10~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)+factor(Typologie_urbain_rural)
+fm <- nombre_jours_au_dessus_seuils_pm10~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)+factor(Typologie_urbain_rural)
 
 
 ols5 <- lm(fm, data = data,weights=population_scale)
@@ -1426,7 +1426,7 @@ VIF(ols5)
 
 
 
-fm <- nombre_jours_au_dessus_seuils_O3~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)+factor(Typologie_urbain_rural)
+fm <- nombre_jours_au_dessus_seuils_O3~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)+factor(Typologie_urbain_rural)
 
 
 ols7 <- lm(fm, data = data,weights=population_scale)
@@ -1438,7 +1438,7 @@ VIF(ols7)
 
 
 
-fm <- sum_cocktail_day~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)+factor(Typologie_urbain_rural)
+fm <- sum_cocktail_day~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)+factor(Typologie_urbain_rural)
 
 
 ols9 <- lm(fm, data = data,weights=population_scale)
@@ -1457,37 +1457,37 @@ library(sandwich)
 ols1_clus <- coeftest(ols1,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data$Département)
+                      cluster = data$DÃ©partement)
 
 
 
 ols2_clus <- coeftest(ols3,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data$Département)
+                      cluster = data$DÃ©partement)
 
 
 ols3_clus <- coeftest(ols5,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data$Département)
+                      cluster = data$DÃ©partement)
 
 
 
 ols4_clus <- coeftest(ols7,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data$Département)
+                      cluster = data$DÃ©partement)
 
 
 ols5_clus <- coeftest(ols9,
                       vcov = vcovCL,
                       type = "HC1",
-                      cluster = data$Département)
+                      cluster = data$DÃ©partement)
 
 
 
-stargazer(ols1_clus, ols2_clus, ols3_clus, ols4_clus,ols5_clus, no.space = TRUE, omit = c("Département"), omit.labels= c("Département"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
+stargazer(ols1_clus, ols2_clus, ols3_clus, ols4_clus,ols5_clus, no.space = TRUE, omit = c("DÃ©partement"), omit.labels= c("DÃ©partement"),omit.yes.no = c("Yes", "No"),omit.stat = c("f","adj.rsq","ser"))
 
 
 stargazer(ols1, ols3, ols5, ols7, ols9, no.space = TRUE)
@@ -1514,14 +1514,14 @@ shp <- readOGR(dsn = "shapefile france",
                layer = "communes-20190101")
 
 
-data2<-data[,c("insee","annee","Région","Département","nombre_jours_au_dessus_seuils_no2","nombre_jours_au_dessus_seuils_pm25","nombre_jours_au_dessus_seuils_pm10","nombre_jours_au_dessus_seuils_O3")]
+data2<-data[,c("insee","annee","RÃ©gion","DÃ©partement","nombre_jours_au_dessus_seuils_no2","nombre_jours_au_dessus_seuils_pm25","nombre_jours_au_dessus_seuils_pm10","nombre_jours_au_dessus_seuils_O3")]
 data2<-filter(data2, data2$annee=="2018")
 
 shp1<-merge(shp,data2)
 
 
-shp1@data$Département<-as.character(shp1@data$Département)
-shp1@data$Région<-as.character(shp1@data$Région)
+shp1@data$DÃ©partement<-as.character(shp1@data$DÃ©partement)
+shp1@data$RÃ©gion<-as.character(shp1@data$RÃ©gion)
 
 
 communes_01012019 <- read_csv("socio economic data municipalities/communes-01012019.csv")
@@ -1533,16 +1533,16 @@ communes_01012019<-na.omit(communes_01012019)
 
 
 shp1@data<-left_join(shp1@data,communes_01012019)
-shp1@data$reg <- ifelse(is.na(shp1@data$reg), shp1@data$Région, shp1@data$reg)
+shp1@data$reg <- ifelse(is.na(shp1@data$reg), shp1@data$RÃ©gion, shp1@data$reg)
 shp1@data$reg[is.na(shp1@data$reg)]<-"01"
 
 
-shp1@data$Département[shp1@data$insee=="75056"]<-"75"
-shp1@data$Région[shp1@data$insee=="75056"]<-"11"
-shp1@data$Département[shp1@data$insee=="13055"]<-"13"
-shp1@data$Région[shp1@data$insee=="13055"]<-"93"
-shp1@data$Département[shp1@data$insee=="69123"]<-"69"
-shp1@data$Région[shp1@data$insee=="69123"]<-"84"
+shp1@data$DÃ©partement[shp1@data$insee=="75056"]<-"75"
+shp1@data$RÃ©gion[shp1@data$insee=="75056"]<-"11"
+shp1@data$DÃ©partement[shp1@data$insee=="13055"]<-"13"
+shp1@data$RÃ©gion[shp1@data$insee=="13055"]<-"93"
+shp1@data$DÃ©partement[shp1@data$insee=="69123"]<-"69"
+shp1@data$RÃ©gion[shp1@data$insee=="69123"]<-"84"
 
 shp1 = subset(shp1, reg != "01")
 shp1 = subset(shp1, reg != "02")
@@ -1554,9 +1554,9 @@ shp1 = subset(shp1, reg != "06")
 
 
 
-data = data %>% select(insee,annee, Département, everything())
+data = data %>% select(insee,annee, DÃ©partement, everything())
 
-data_panel<-data[,c("insee","annee","Département","Région","mediane","nombre_jours_au_dessus_seuils_no2","nombre_jours_au_dessus_seuils_pm25","nombre_jours_au_dessus_seuils_pm10","nombre_jours_au_dessus_seuils_O3","Typologie_urbain_rural","menage_autre_sans_famille_percentage","menage_avec_famille_avec_enfant_percentage","menage_avec_famille_monoparental_percentage","menage_avec_famille_sans_enfant_percentage","pop_0_14_percentage","pop_15_29_percentage","pop_30_44_percentage","pop_45_59_percentage","pop_60_74_percentage","pop_75_89_percentage","pop_90_plus_percentage","pop_homme_percentage","pop_femme_percentage","inactifs_15_64_percentage","chomeurs_15_64_percentage","actifs_occupes_15_64_prof_inter_compl_nombre_percentage","actifs_occupes_15_64_ouvriers_compl_nombre_percentage","actifs_occupes_15_64_employes_compl_nombre_percentage","actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage","actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage","actifs_occupes_15_64_agriculteurs_compl_nombre_percentage","sum_cocktail_day","part_cocktail")]
+data_panel<-data[,c("insee","annee","DÃ©partement","RÃ©gion","mediane","nombre_jours_au_dessus_seuils_no2","nombre_jours_au_dessus_seuils_pm25","nombre_jours_au_dessus_seuils_pm10","nombre_jours_au_dessus_seuils_O3","Typologie_urbain_rural","menage_autre_sans_famille_percentage","menage_avec_famille_avec_enfant_percentage","menage_avec_famille_monoparental_percentage","menage_avec_famille_sans_enfant_percentage","pop_0_14_percentage","pop_15_29_percentage","pop_30_44_percentage","pop_45_59_percentage","pop_60_74_percentage","pop_75_89_percentage","pop_90_plus_percentage","pop_homme_percentage","pop_femme_percentage","inactifs_15_64_percentage","chomeurs_15_64_percentage","actifs_occupes_15_64_prof_inter_compl_nombre_percentage","actifs_occupes_15_64_ouvriers_compl_nombre_percentage","actifs_occupes_15_64_employes_compl_nombre_percentage","actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage","actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage","actifs_occupes_15_64_agriculteurs_compl_nombre_percentage","sum_cocktail_day","part_cocktail")]
 data_panel<-na.omit(data_panel)
 a<-table(data_panel$insee)
 a<-as.data.frame(a)
@@ -1568,10 +1568,10 @@ data_panel<-filter(data_panel, data_panel$Freq>6)
 
 #for each sub-sample re run the code 
 data_panel<-filter(data_panel, data_panel$Typologie_urbain_rural=="urbain dense")
-data_panel<-filter(data_panel, data_panel$Typologie_urbain_rural=="urbain densité intermédiaire")
-data_panel<-filter(data_panel, data_panel$Typologie_urbain_rural=="rural sous faible influence d'un pôle")
-data_panel<-filter(data_panel, data_panel$Typologie_urbain_rural=="rural sous forte influence d'un pôle")
-data_panel<-filter(data_panel, data_panel$Typologie_urbain_rural=="rural autonome très peu dense")
+data_panel<-filter(data_panel, data_panel$Typologie_urbain_rural=="urbain densitÃ© intermÃ©diaire")
+data_panel<-filter(data_panel, data_panel$Typologie_urbain_rural=="rural sous faible influence d'un pÃ´le")
+data_panel<-filter(data_panel, data_panel$Typologie_urbain_rural=="rural sous forte influence d'un pÃ´le")
+data_panel<-filter(data_panel, data_panel$Typologie_urbain_rural=="rural autonome trÃ¨s peu dense")
 data_panel<-filter(data_panel, data_panel$Typologie_urbain_rural=="rural autonome peu dense")
 
 
@@ -1630,48 +1630,48 @@ data_panel<-na.omit(data_panel)
 
 library(splm)
 
-slmtest(nombre_jours_au_dessus_seuils_no2~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee), data=data_panel, listw = listw, test="lml")
-slmtest(nombre_jours_au_dessus_seuils_no2~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee), data=data_panel, listw = listw, test="lme")
+slmtest(nombre_jours_au_dessus_seuils_no2~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee), data=data_panel, listw = listw, test="lml")
+slmtest(nombre_jours_au_dessus_seuils_no2~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee), data=data_panel, listw = listw, test="lme")
 
-slmtest(nombre_jours_au_dessus_seuils_no2~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee), data=data_panel, listw = listw, test="rlml")
-slmtest(nombre_jours_au_dessus_seuils_no2~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee), data=data_panel, listw = listw, test="rlme")
-
-
-
-
-slmtest(nombre_jours_au_dessus_seuils_pm25~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee), data=data_panel, listw = listw, test="lml")
-slmtest(nombre_jours_au_dessus_seuils_pm25~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee), data=data_panel, listw = listw, test="lme")
-
-slmtest(nombre_jours_au_dessus_seuils_pm25~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee), data=data_panel, listw = listw, test="rlml")
-slmtest(nombre_jours_au_dessus_seuils_pm25~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee), data=data_panel, listw = listw, test="rlme")
+slmtest(nombre_jours_au_dessus_seuils_no2~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee), data=data_panel, listw = listw, test="rlml")
+slmtest(nombre_jours_au_dessus_seuils_no2~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee), data=data_panel, listw = listw, test="rlme")
 
 
 
 
+slmtest(nombre_jours_au_dessus_seuils_pm25~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee), data=data_panel, listw = listw, test="lml")
+slmtest(nombre_jours_au_dessus_seuils_pm25~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee), data=data_panel, listw = listw, test="lme")
 
-slmtest(nombre_jours_au_dessus_seuils_pm10~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee), data=data_panel, listw = listw, test="lml")
-slmtest(nombre_jours_au_dessus_seuils_pm10~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee), data=data_panel, listw = listw, test="lme")
-
-slmtest(nombre_jours_au_dessus_seuils_pm10~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee), data=data_panel, listw = listw, test="rlml")
-slmtest(nombre_jours_au_dessus_seuils_pm10~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee), data=data_panel, listw = listw, test="rlme")
-
-
-
-
-slmtest(nombre_jours_au_dessus_seuils_O3~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee), data=data_panel, listw = listw, test="lml")
-slmtest(nombre_jours_au_dessus_seuils_O3~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee), data=data_panel, listw = listw, test="lme")
-
-slmtest(nombre_jours_au_dessus_seuils_O3~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee), data=data_panel, listw = listw, test="rlml")
-slmtest(nombre_jours_au_dessus_seuils_O3~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee), data=data_panel, listw = listw, test="rlme")
+slmtest(nombre_jours_au_dessus_seuils_pm25~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee), data=data_panel, listw = listw, test="rlml")
+slmtest(nombre_jours_au_dessus_seuils_pm25~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee), data=data_panel, listw = listw, test="rlme")
 
 
 
 
-slmtest(part_cocktail~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee), data=data_panel, listw = listw, test="lml")
-slmtest(part_cocktail~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee), data=data_panel, listw = listw, test="lme")
 
-slmtest(part_cocktail~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee), data=data_panel, listw = listw, test="rlml")
-slmtest(part_cocktail~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee), data=data_panel, listw = listw, test="rlme")
+slmtest(nombre_jours_au_dessus_seuils_pm10~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee), data=data_panel, listw = listw, test="lml")
+slmtest(nombre_jours_au_dessus_seuils_pm10~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee), data=data_panel, listw = listw, test="lme")
+
+slmtest(nombre_jours_au_dessus_seuils_pm10~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee), data=data_panel, listw = listw, test="rlml")
+slmtest(nombre_jours_au_dessus_seuils_pm10~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee), data=data_panel, listw = listw, test="rlme")
+
+
+
+
+slmtest(nombre_jours_au_dessus_seuils_O3~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee), data=data_panel, listw = listw, test="lml")
+slmtest(nombre_jours_au_dessus_seuils_O3~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee), data=data_panel, listw = listw, test="lme")
+
+slmtest(nombre_jours_au_dessus_seuils_O3~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee), data=data_panel, listw = listw, test="rlml")
+slmtest(nombre_jours_au_dessus_seuils_O3~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee), data=data_panel, listw = listw, test="rlme")
+
+
+
+
+slmtest(part_cocktail~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee), data=data_panel, listw = listw, test="lml")
+slmtest(part_cocktail~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee), data=data_panel, listw = listw, test="lme")
+
+slmtest(part_cocktail~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee), data=data_panel, listw = listw, test="rlml")
+slmtest(part_cocktail~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee), data=data_panel, listw = listw, test="rlme")
 
 
 
@@ -1712,14 +1712,14 @@ shp <- readOGR(dsn = "shapefile france",
 
 
 
-data2<-data[,c("insee","annee","Région","Département","nombre_jours_au_dessus_seuils_no2","nombre_jours_au_dessus_seuils_pm25","nombre_jours_au_dessus_seuils_pm10","nombre_jours_au_dessus_seuils_O3")]
+data2<-data[,c("insee","annee","RÃ©gion","DÃ©partement","nombre_jours_au_dessus_seuils_no2","nombre_jours_au_dessus_seuils_pm25","nombre_jours_au_dessus_seuils_pm10","nombre_jours_au_dessus_seuils_O3")]
 data2<-filter(data2, data2$annee=="2018")
 
 shp1<-merge(shp,data2)
 
 
-shp1@data$Département<-as.character(shp1@data$Département)
-shp1@data$Région<-as.character(shp1@data$Région)
+shp1@data$DÃ©partement<-as.character(shp1@data$DÃ©partement)
+shp1@data$RÃ©gion<-as.character(shp1@data$RÃ©gion)
 
 
 communes_01012019 <- read_csv("socio economic data municipalities/communes-01012019.csv")
@@ -1731,16 +1731,16 @@ communes_01012019<-na.omit(communes_01012019)
 
 
 shp1@data<-left_join(shp1@data,communes_01012019)
-shp1@data$reg <- ifelse(is.na(shp1@data$reg), shp1@data$Région, shp1@data$reg)
+shp1@data$reg <- ifelse(is.na(shp1@data$reg), shp1@data$RÃ©gion, shp1@data$reg)
 shp1@data$reg[is.na(shp1@data$reg)]<-"01"
 
 
-shp1@data$Département[shp1@data$insee=="75056"]<-"75"
-shp1@data$Région[shp1@data$insee=="75056"]<-"11"
-shp1@data$Département[shp1@data$insee=="13055"]<-"13"
-shp1@data$Région[shp1@data$insee=="13055"]<-"93"
-shp1@data$Département[shp1@data$insee=="69123"]<-"69"
-shp1@data$Région[shp1@data$insee=="69123"]<-"84"
+shp1@data$DÃ©partement[shp1@data$insee=="75056"]<-"75"
+shp1@data$RÃ©gion[shp1@data$insee=="75056"]<-"11"
+shp1@data$DÃ©partement[shp1@data$insee=="13055"]<-"13"
+shp1@data$RÃ©gion[shp1@data$insee=="13055"]<-"93"
+shp1@data$DÃ©partement[shp1@data$insee=="69123"]<-"69"
+shp1@data$RÃ©gion[shp1@data$insee=="69123"]<-"84"
 
 shp1 = subset(shp1, reg != "01")
 shp1 = subset(shp1, reg != "02")
@@ -1752,9 +1752,9 @@ shp1 = subset(shp1, reg != "06")
 
 
 
-data = data %>% select(insee,annee, Département, everything())
+data = data %>% select(insee,annee, DÃ©partement, everything())
 
-data_panel<-data[,c("insee","annee","Département","Région","mediane","nombre_jours_au_dessus_seuils_no2","nombre_jours_au_dessus_seuils_pm25","nombre_jours_au_dessus_seuils_pm10","nombre_jours_au_dessus_seuils_O3","Typologie_urbain_rural","menage_autre_sans_famille_percentage","menage_avec_famille_avec_enfant_percentage","menage_avec_famille_monoparental_percentage","menage_avec_famille_sans_enfant_percentage","pop_0_14_percentage","pop_15_29_percentage","pop_30_44_percentage","pop_45_59_percentage","pop_60_74_percentage","pop_75_89_percentage","pop_90_plus_percentage","pop_homme_percentage","pop_femme_percentage","inactifs_15_64_percentage","chomeurs_15_64_percentage","actifs_occupes_15_64_prof_inter_compl_nombre_percentage","actifs_occupes_15_64_ouvriers_compl_nombre_percentage","actifs_occupes_15_64_employes_compl_nombre_percentage","actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage","actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage","actifs_occupes_15_64_agriculteurs_compl_nombre_percentage","sum_cocktail_day","part_cocktail")]
+data_panel<-data[,c("insee","annee","DÃ©partement","RÃ©gion","mediane","nombre_jours_au_dessus_seuils_no2","nombre_jours_au_dessus_seuils_pm25","nombre_jours_au_dessus_seuils_pm10","nombre_jours_au_dessus_seuils_O3","Typologie_urbain_rural","menage_autre_sans_famille_percentage","menage_avec_famille_avec_enfant_percentage","menage_avec_famille_monoparental_percentage","menage_avec_famille_sans_enfant_percentage","pop_0_14_percentage","pop_15_29_percentage","pop_30_44_percentage","pop_45_59_percentage","pop_60_74_percentage","pop_75_89_percentage","pop_90_plus_percentage","pop_homme_percentage","pop_femme_percentage","inactifs_15_64_percentage","chomeurs_15_64_percentage","actifs_occupes_15_64_prof_inter_compl_nombre_percentage","actifs_occupes_15_64_ouvriers_compl_nombre_percentage","actifs_occupes_15_64_employes_compl_nombre_percentage","actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage","actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage","actifs_occupes_15_64_agriculteurs_compl_nombre_percentage","sum_cocktail_day","part_cocktail")]
 data_panel<-na.omit(data_panel)
 a<-table(data_panel$insee)
 a<-as.data.frame(a)
@@ -1766,10 +1766,10 @@ data_panel<-filter(data_panel, data_panel$Freq>6)
 #for each sub-sample re run the code #
 #
 data_panel<-filter(data_panel, data_panel$Typologie_urbain_rural=="urbain dense")
-data_panel<-filter(data_panel, data_panel$Typologie_urbain_rural=="urbain densité intermédiaire")
-data_panel<-filter(data_panel, data_panel$Typologie_urbain_rural=="rural sous faible influence d'un pôle")
-data_panel<-filter(data_panel, data_panel$Typologie_urbain_rural=="rural sous forte influence d'un pôle")
-data_panel<-filter(data_panel, data_panel$Typologie_urbain_rural=="rural autonome très peu dense")
+data_panel<-filter(data_panel, data_panel$Typologie_urbain_rural=="urbain densitÃ© intermÃ©diaire")
+data_panel<-filter(data_panel, data_panel$Typologie_urbain_rural=="rural sous faible influence d'un pÃ´le")
+data_panel<-filter(data_panel, data_panel$Typologie_urbain_rural=="rural sous forte influence d'un pÃ´le")
+data_panel<-filter(data_panel, data_panel$Typologie_urbain_rural=="rural autonome trÃ¨s peu dense")
 data_panel<-filter(data_panel, data_panel$Typologie_urbain_rural=="rural autonome peu dense")
 
 
@@ -1831,27 +1831,27 @@ data_panel<-na.omit(data_panel)
 
 
 
-fm <- nombre_jours_au_dessus_seuils_no2~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)
+fm <- nombre_jours_au_dessus_seuils_no2~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)
 test <- spml(fm, data = data_panel, listw = listw,
              model="within", effect = c("time"), lag = FALSE, spatial.error = "b", index = c("insee","annee"))
 
 
 
 
-fm <- nombre_jours_au_dessus_seuils_pm25~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)
+fm <- nombre_jours_au_dessus_seuils_pm25~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)
 test <- spml(fm, data = data_panel, listw = listw,
              model="within", effect = c("time"), lag = FALSE, spatial.error = "b", index = c("insee","annee"))
 
 
 
 
-fm <- nombre_jours_au_dessus_seuils_pm10~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)
+fm <- nombre_jours_au_dessus_seuils_pm10~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)
 test <- spml(fm, data = data_panel, listw = listw,
              model="within", effect = c("time"), lag = FALSE, spatial.error = "b", index = c("insee","annee"))
 
 
 
-fm <- nombre_jours_au_dessus_seuils_O3~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)
+fm <- nombre_jours_au_dessus_seuils_O3~mediane+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)
 test <- spml(fm, data = data_panel, listw = listw,
              model="within", effect = c("time"), lag = FALSE, spatial.error = "b", index = c("insee","annee"))
 
@@ -1860,7 +1860,7 @@ test <- spml(fm, data = data_panel, listw = listw,
 
 
 
-fm <- part_cocktail~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)
+fm <- part_cocktail~mediane+sum_cocktail_day+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)
 test <- spml(fm, data = data_panel, listw = listw,
              model="within", effect = c("time"), lag = FALSE, spatial.error = "b", index = c("insee","annee"))
 
@@ -1880,7 +1880,7 @@ test <- spml(fm, data = data_panel, listw = listw,
 
 
 
-data_urbain<-filter(data, data$Typologie_urbain_rural=="urbain densité intermédiaire")
+data_urbain<-filter(data, data$Typologie_urbain_rural=="urbain densitÃ© intermÃ©diaire")
 
 
 
@@ -1888,7 +1888,7 @@ data_urbain<-filter(data, data$Typologie_urbain_rural=="urbain dense")
 
 
 
-fm <- nombre_jours_au_dessus_seuils_no2~taux_pauvrete_seuil_60+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_no2~taux_pauvrete_seuil_60+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 
 
@@ -1897,14 +1897,14 @@ ols1 <- lm(fm, data = data_urbain)
 
 
 
-fm <- nombre_jours_au_dessus_seuils_pm25~taux_pauvrete_seuil_60+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_pm25~taux_pauvrete_seuil_60+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 
 ols3 <- lm(fm, data = data_urbain)
 
 
 
-fm <- nombre_jours_au_dessus_seuils_pm10~taux_pauvrete_seuil_60+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_pm10~taux_pauvrete_seuil_60+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 
 ols5 <- lm(fm, data = data_urbain)
@@ -1912,7 +1912,7 @@ ols5 <- lm(fm, data = data_urbain)
 
 
 
-fm <- nombre_jours_au_dessus_seuils_O3~taux_pauvrete_seuil_60+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_O3~taux_pauvrete_seuil_60+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 
 ols7 <- lm(fm, data = data_urbain)
@@ -1922,21 +1922,21 @@ library(stargazer)
 
 
 
-fm <- nombre_jours_au_dessus_seuils_no2~premier_decile+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_no2~premier_decile+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols9 <- lm(fm, data = data_urbain)
 
-fm <- nombre_jours_au_dessus_seuils_no2~neuvieme_decile+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_no2~neuvieme_decile+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols10 <- lm(fm, data = data_urbain)
 
 
-fm <- nombre_jours_au_dessus_seuils_no2~part_prestation_sociale+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_no2~part_prestation_sociale+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols11 <- lm(fm, data = data_urbain)
 
 
-fm <- nombre_jours_au_dessus_seuils_no2~part_revenu_patrimoine_et_autre_revenu+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_no2~part_revenu_patrimoine_et_autre_revenu+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols12 <- lm(fm, data = data_urbain)
 
@@ -1946,21 +1946,21 @@ ols12 <- lm(fm, data = data_urbain)
 
 
 
-fm <- nombre_jours_au_dessus_seuils_pm25~premier_decile+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_pm25~premier_decile+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols13 <- lm(fm, data = data_urbain)
 
-fm <- nombre_jours_au_dessus_seuils_pm25~neuvieme_decile+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_pm25~neuvieme_decile+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols14 <- lm(fm, data = data_urbain)
 
 
-fm <- nombre_jours_au_dessus_seuils_pm25~part_prestation_sociale+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_pm25~part_prestation_sociale+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols15 <- lm(fm, data = data_urbain)
 
 
-fm <- nombre_jours_au_dessus_seuils_pm25~part_revenu_patrimoine_et_autre_revenu+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_pm25~part_revenu_patrimoine_et_autre_revenu+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols16 <- lm(fm, data = data_urbain)
 
@@ -1974,21 +1974,21 @@ ols16 <- lm(fm, data = data_urbain)
 
 
 
-fm <- nombre_jours_au_dessus_seuils_pm10~premier_decile+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_pm10~premier_decile+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols17 <- lm(fm, data = data_urbain)
 
-fm <- nombre_jours_au_dessus_seuils_pm10~neuvieme_decile+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_pm10~neuvieme_decile+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols18 <- lm(fm, data = data_urbain)
 
 
-fm <- nombre_jours_au_dessus_seuils_pm10~part_prestation_sociale+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_pm10~part_prestation_sociale+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols19 <- lm(fm, data = data_urbain)
 
 
-fm <- nombre_jours_au_dessus_seuils_pm10~part_revenu_patrimoine_et_autre_revenu+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_pm10~part_revenu_patrimoine_et_autre_revenu+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols20 <- lm(fm, data = data_urbain)
 
@@ -2001,21 +2001,21 @@ ols20 <- lm(fm, data = data_urbain)
 
 
 
-fm <- nombre_jours_au_dessus_seuils_O3~premier_decile+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_O3~premier_decile+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols21 <- lm(fm, data = data_urbain)
 
-fm <- nombre_jours_au_dessus_seuils_O3~neuvieme_decile+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_O3~neuvieme_decile+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols22 <- lm(fm, data = data_urbain)
 
 
-fm <- nombre_jours_au_dessus_seuils_O3~part_prestation_sociale+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_O3~part_prestation_sociale+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols23 <- lm(fm, data = data_urbain)
 
 
-fm <- nombre_jours_au_dessus_seuils_O3~part_revenu_patrimoine_et_autre_revenu+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(Département)+factor(annee)
+fm <- nombre_jours_au_dessus_seuils_O3~part_revenu_patrimoine_et_autre_revenu+menage_autre_sans_famille_percentage+menage_avec_famille_avec_enfant_percentage+menage_avec_famille_monoparental_percentage+menage_avec_famille_sans_enfant_percentage+pop_0_14_percentage+pop_15_29_percentage+pop_30_44_percentage+pop_45_59_percentage+pop_75_89_percentage+pop_90_plus_percentage+pop_femme_percentage+inactifs_15_64_percentage+chomeurs_15_64_percentage+actifs_occupes_15_64_prof_inter_compl_nombre_percentage+actifs_occupes_15_64_employes_compl_nombre_percentage+actifs_occupes_15_64_cadre_prof_intel_compl_nombre_percentage+actifs_occupes_15_64_artisans_chef_entre_compl_nombre_percentage+actifs_occupes_15_64_agriculteurs_compl_nombre_percentage+factor(DÃ©partement)+factor(annee)
 
 ols24 <- lm(fm, data = data_urbain)
 
@@ -2088,12 +2088,12 @@ data$part_cocktail<-(data$no2_pm25_pm10_o3+data$no2_pm10_2+data$pm10_o3_2+data$n
 
 
 
-data_urbain<-filter(data, data$Typologie_urbain_rural=="rural sous forte influence d'un pôle"|data$Typologie_urbain_rural=="rural sous faible influence d'un pôle"|data$Typologie_urbain_rural=="rural autonome très peu dense"|data$Typologie_urbain_rural=="rural autonome peu dense")
+data_urbain<-filter(data, data$Typologie_urbain_rural=="rural sous forte influence d'un pÃ´le"|data$Typologie_urbain_rural=="rural sous faible influence d'un pÃ´le"|data$Typologie_urbain_rural=="rural autonome trÃ¨s peu dense"|data$Typologie_urbain_rural=="rural autonome peu dense")
 
 
 data_urbain<-filter(data_urbain, data_urbain$annee=="2018")
 
-data_urbain<-filter(data_urbain, data_urbain$`Établissements au 31 décembre 2020`!=0)
+data_urbain<-filter(data_urbain, data_urbain$`Ã‰tablissements au 31 dÃ©cembre 2020`!=0)
 
 
 
@@ -2117,7 +2117,7 @@ ggplot(data_urbain,aes(log(dens_pop), sum_cocktail_day)) +
 
 
 library(ggplot2)
-ggplot(data_urbain,aes(log(dens_pop), log(`Établissements au 31 décembre 2020`))) +
+ggplot(data_urbain,aes(log(dens_pop), log(`Ã‰tablissements au 31 dÃ©cembre 2020`))) +
   geom_point()+
   geom_smooth(method='lm', formula= y~x)+
   stat_regline_equation(label.x = 1, label.y = 7.5, size=5)+
@@ -2183,11 +2183,11 @@ ggplot(data_urbain,aes(log(dens_pop), part_cocktail)) +
 
 
 
-data_urbain<-filter(data, data$Typologie_urbain_rural=="urbain dense"|data$Typologie_urbain_rural=="urbain densité intermédiaire")
+data_urbain<-filter(data, data$Typologie_urbain_rural=="urbain dense"|data$Typologie_urbain_rural=="urbain densitÃ© intermÃ©diaire")
 
 data_urbain<-filter(data_urbain, data_urbain$annee=="2018")
 
-#data_urbain<-filter(data_urbain, data_urbain$`Établissements au 31 décembre 2020`!=0)
+#data_urbain<-filter(data_urbain, data_urbain$`Ã‰tablissements au 31 dÃ©cembre 2020`!=0)
 
 
 
@@ -2212,7 +2212,7 @@ ggplot(data_urbain,aes(log(dens_pop), sum_cocktail_day)) +
 
 
 library(ggplot2)
-ggplot(data_urbain,aes(log(dens_pop), log(`Établissements au 31 décembre 2020`))) +
+ggplot(data_urbain,aes(log(dens_pop), log(`Ã‰tablissements au 31 dÃ©cembre 2020`))) +
   geom_point()+
   geom_smooth(method='lm', formula= y~x)+
   stat_regline_equation(label.x = 4, label.y = 10.3, size=5)+
