@@ -7,4 +7,4 @@
 # Comments 
 
 - the shapefile used in the spatial analysis is too large to be downloaded here. it is possible, however, to download it directly here : https://www.data.gouv.fr/fr/datasets/decoupage-administratif-communal-francais-issu-d-openstreetmap/
-
+- For reasons of confidentiality, the source data on the concentration of pollutants produced by ineris is not available in this file. However, the pollution indicators used in the study and the code to create it are available.
