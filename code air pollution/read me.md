@@ -1,0 +1,1 @@
+## For reasons of confidentiality, the source data on the concentration of pollutants produced by ineris is not available in this file. However, the pollution indicators used in the study and the code to create it are available.
