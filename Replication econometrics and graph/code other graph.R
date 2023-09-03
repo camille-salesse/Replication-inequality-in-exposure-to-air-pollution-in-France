@@ -25,13 +25,23 @@ library(FactoMineR)
 library(factoextra)
 
 
-setwd("D:/code and data inequality in exposure to air pollution")
+
+setwd("Replication-inequality-in-exposure-to-air-pollution-in-France/Replication econometrics and graph")
 
 
 # Load the original csv
 # This was created after running preparation.R
 
-data <- read.csv("final_data_inequality_in_exposure")
+data1 <- read.csv("final_data_inequality_in_exposure_1")
+data2 <- read.csv("final_data_inequality_in_exposure_2")
+data3 <- read.csv("final_data_inequality_in_exposure_3")
+
+data1<-data1[,-c(1)]
+data2<-data2[,-c(1)]
+data3<-data3[,-c(1)]
+
+data<-left_join(data1,data2)
+data<-left_join(data,data3)
 
 
 
