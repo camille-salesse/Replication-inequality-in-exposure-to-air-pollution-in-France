@@ -1,10 +1,10 @@
 # Replication-inequality-in-exposure-to-air-pollution-in-France
 
 - These files contain all the codes and data needed to replicate the results of the paper "inequality in exposure to air pollution in France: bringing pollutant cocktail into the picture" salesse, 2023.
-
-- The database can be completely reconstructed. The final database and the codes used to replicate the results are also in the file.
+- To directly replicate the results and graphs : The final database and codes are in the "Replication econometrics and graph" folder.
+- The history of the codes and bases used to build the final database can be found in the other folders. The database can also be completely rebuilt with the codes and data integrated into this repository. 
 
 # Comments 
 
-- le shapefile est trop volumineux pour etre telechargé ici . il est neamoins possible de le telecharger directement ici : https://www.data.gouv.fr/fr/datasets/decoupage-administratif-communal-francais-issu-d-openstreetmap/
+- the shapefile used in the spatial analysis is too large to be downloaded here. it is possible, however, to download it directly here : https://www.data.gouv.fr/fr/datasets/decoupage-administratif-communal-francais-issu-d-openstreetmap/
 
