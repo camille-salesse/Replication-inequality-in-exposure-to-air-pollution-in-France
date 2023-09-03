@@ -2,7 +2,7 @@
 
 - These files contain all the codes and data needed to replicate the results of the paper "inequality in exposure to air pollution in France: bringing pollutant cocktail into the picture" salesse, 2023.
 - To directly replicate the results and graphs : The final database and codes are in the "Replication econometrics and graph" folder.
-- The history of the codes and bases used to build the final database can be found in the other folders. The database can also be completely rebuilt with the codes and data integrated into this repository. The path names in the codes correspond to the folder names in this repository.
+- All the the codes and some databases (if the file size is not too large, github limits the size of the file to be uploaded) used to build the final database can be found in the other folders. The path names in the codes correspond to the folder names in this repository.
 
 # Comments 
 
