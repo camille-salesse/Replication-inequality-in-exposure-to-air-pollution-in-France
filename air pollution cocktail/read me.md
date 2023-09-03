@@ -1,1 +1,1 @@
-# For reasons of confidentiality of the data provided by INERIS, we do not provide the source data for daily pollutant concentrations.
+# For reasons of confidentiality of the data provided by INERIS, we do not provide the source data for daily pollutant concentrations. However, the pollution indicators used in the study and the code to create it are available. 
