@@ -43,20 +43,21 @@ library(ggplot2)
 
 setFixest_notes(FALSE)
 
-# The working directory must be the root of the replication package, the
-# folder that contains code, data and output. If you opened the .Rproj file
-# or used Session, Set Working Directory, To Source File Location, adjust the
-# line below accordingly.
-if (!dir.exists("data") && dir.exists(file.path("..", "data")))
-  setwd("..")
-stopifnot(dir.exists("data"))
+# Set the path below to the folder of this replication package, the one that
+# contains code, data and output. Then everything else runs on its own.
 
-dir_out <- "output"
-dir_fig <- file.path(dir_out, "figures")
-dir_tab <- file.path(dir_out, "tables")
-for (d in c(dir_out, dir_fig, dir_tab))
-  if (!dir.exists(d)) dir.create(d, recursive = TRUE)
+setwd("C:/Desktop/replication_package")   # <-- EDIT THIS LINE
 
+# Check that the data folder is where it should be
+if (!dir.exists("data"))
+  stop("No data folder found here. Check the path above.")
+
+# Create the output folders if they do not exist yet
+dir.create("output/figures", recursive = TRUE, showWarnings = FALSE)
+dir.create("output/tables",  recursive = TRUE, showWarnings = FALSE)
+
+dir_fig <- "output/figures"
+dir_tab <- "output/tables"
 
 ## ------------------------------------------------------- 1. LOAD THE DATA
 #
