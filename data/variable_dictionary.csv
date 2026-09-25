@@ -1,0 +1,35 @@
+variable,description
+IRIS,"Neighbourhood identifier, IRIS code for split municipalities and INSEE code otherwise"
+insee,INSEE code of the municipality
+annee,"Year, 2012 to 2021"
+AAV2020,"Identifier of the urban attraction area, INSEE 2020 delineation"
+TAAV2017,"Size class of the urban attraction area, 1 to 5, with 5 for the Paris area"
+pole_centre_air,Equal to one when the unit belongs to the core of its urban attraction area
+mediane,"Median standard of living of the unit, euros per year, FILOSOFI"
+p_pop,Population of the unit
+vingtile,"National income ventile, computed year by year over all units of the sample"
+decile,"National income decile, computed year by year"
+jours_no2,Days per year on which the daily mean of NO2 exceeds 25 microgrammes per cubic metre
+jours_pm25,Days per year on which the daily mean of PM2.5 exceeds 15
+jours_pm10,Days per year on which the daily mean of PM10 exceeds 45
+jours_o3,Days per year on which the daily maximum of O3 exceeds 100
+sum_cocktail_day,"Polluted days, days on which at least one pollutant exceeds its guideline"
+cocktail_days,"Compound days, days on which at least two pollutants exceed simultaneously"
+cocktail_sans_no2,Compound days on which NO2 does not exceed
+jours_pollues_sans_o3,"Polluted days counting only NO2, PM2.5 and PM10"
+cocktail_sans_o3,"Compound days counting only NO2, PM2.5 and PM10"
+no2_2,Days on which NO2 alone exceeds
+pm25_2,Days on which PM2.5 alone exceeds
+pm10_2,Days on which PM10 alone exceeds
+o3_2,Days on which O3 alone exceeds
+no2_pm25_2,Days on which NO2 and PM2.5 exceed together and no other pollutant does
+no2_pm10_2,Days on which NO2 and PM10 exceed together and no other pollutant does
+no2_o3_2,Days on which NO2 and O3 exceed together and no other pollutant does
+pm25_pm10_2,Days on which PM2.5 and PM10 exceed together and no other pollutant does
+pm25_o3_2,Days on which PM2.5 and O3 exceed together and no other pollutant does
+pm10_o3_2,Days on which PM10 and O3 exceed together and no other pollutant does
+no2_pm25_pm10_2,"Days on which NO2, PM2.5 and PM10 exceed together and O3 does not"
+pm25_no2_o3_2,"Days on which NO2, PM2.5 and O3 exceed together and PM10 does not"
+no2_pm10_o3_2,"Days on which NO2, PM10 and O3 exceed together and PM2.5 does not"
+pm10_pm25_o3_2,"Days on which PM2.5, PM10 and O3 exceed together and NO2 does not"
+no2_pm25_pm10_o3,Days on which all four pollutants exceed together
